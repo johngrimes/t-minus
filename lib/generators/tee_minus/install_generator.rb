@@ -5,6 +5,8 @@ module TeeMinus
 
       source_root File.expand_path('../templates', __FILE__)
 
+      hook_for :orm
+
       def copy_configuration_file
         copy_file 'prelaunch_config.yml', 'config/prelaunch_config.yml'
       end
