@@ -1,0 +1,11 @@
+<p>Our new website is launching soon.</p>
+<p>Add your name to the list and you will be the first to know when we are ready.</p>
+<%= form_for @prelaunch_subscriber, :url => prelaunch_path do |f| %>
+  <div class="field">
+    <%= f.text_field :email %>
+    <%= error_message_on @prelaunch_subscriber, :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Add me to the list' %>
+  </div>
+<% end %>
