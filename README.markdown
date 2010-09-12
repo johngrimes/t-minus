@@ -1,9 +1,11 @@
 # T-Minus
 
 T-Minus is a Rails engine and set of generators that make it easier to
-create a pelaunch page for your Rails 3 application. It includes support
+create a prelaunch page for your Rails application. It includes support
 for the collection of email addresses from interested visitors, and it
 can automatically update your Campaign Monitor mailing list.
+
+T-Minus currently only works with Rails 3 applications.
 
 You can use T-Minus as a gem by adding it the following line to your
 Gemfile, then running `bundle:install`:
