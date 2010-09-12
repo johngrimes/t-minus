@@ -1,4 +1,4 @@
-require 'tee-minus'
+require 't-minus'
 require 'rails'
 
 module TeeMinus
