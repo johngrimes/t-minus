@@ -23,11 +23,11 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
-     "lib/generators/tee-minus/tee-minus_generator.rb",
      "lib/tee-minus.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
-     "spec/tee-minus_spec.rb"
+     "spec/tee-minus_spec.rb",
+     "tee-minus.gemspec"
   ]
   s.homepage = %q{http://github.com/johngrimes/tee-minus}
   s.rdoc_options = ["--charset=UTF-8"]
