@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = 'tee-minus'
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.name = 't-minus'
+    gem.summary = %Q{Prelaunch page and subscriber list for your Rails app.}
+    gem.description = %Q{Rails engine and generators that make it easier to create a prelaunch page for your application that can collect email addresses of interested visitors.}
     gem.email = 'john@smallspark.com.au'
-    gem.homepage = 'http://github.com/johngrimes/tee-minus'
+    gem.homepage = 'http://github.com/johngrimes/t-minus'
     gem.authors = ['John Grimes']
     gem.add_development_dependency 'rspec', '>= 1.3.0'
     gem.add_development_dependency 'yard', '>= 0'

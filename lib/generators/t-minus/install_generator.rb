@@ -1,11 +1,11 @@
 require 'rails/generators/active_record'
 
-module TeeMinus
+module TMinus
   module Generators
     class InstallGenerator < Rails::Generators::Base
       include Rails::Generators::Migration
 
-      desc 'Generates configuration and migration files for Tee Minus'
+      desc 'Generates configuration and migration files for T-Minus'
       source_root File.expand_path('../templates', __FILE__)
 
       def copy_configuration_file

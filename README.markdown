@@ -1,24 +1,24 @@
-# Tee Minus
+# T-Minus
 
-Tee Minus is a Rails engine and set of generators that make it easier to
+T-Minus is a Rails engine and set of generators that make it easier to
 create a pelaunch page for your Rails 3 application. It includes support
 for the collection of email addresses from interested visitors, and it
 can automatically update your Campaign Monitor mailing list.
 
-You can use Tee Minus as a gem by adding it the following line to your
+You can use T-Minus as a gem by adding it the following line to your
 Gemfile, then running `bundle:install`:
 
-    gem 'tee_minus'
+    gem 't-minus'
 
 Or you can install it as a plugin:
 
-    rails plugin install https://johngrimes@github.com/johngrimes/tee_minus.git
+    rails plugin install https://johngrimes@github.com/johngrimes/t-minus.git
 
 ## Getting started
 
-Once you have Tee Minus installed, run the installation generator:
+Once you have T-Minus installed, run the installation generator:
 
-    rails generate tee_minus:install
+    rails generate t-minus:install
 
 By default, this will generate the following:
 
@@ -46,15 +46,13 @@ the following options:
 
 If you want to customise the PrelaunchController, simply generate the controller file and make the changes:
 
-    rails generate tee_minus:controller
+    rails generate t-minus:controller
 
 ## Contributing
  
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add specs for it.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, bump the version in a commit by itself I can ignore it when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
 ## Copyright
