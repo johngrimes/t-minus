@@ -1,1 +1,1 @@
-require 'tee-minus/engine' if defined?(Rails)
+require 't-minus/engine' if defined?(Rails)
