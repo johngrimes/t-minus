@@ -18,7 +18,7 @@ Or you can install it as a plugin:
 
 Once you have T-Minus installed, run the installation generator:
 
-    rails generate t-minus:install
+    rails generate t_minus:install
 
 By default, this will generate the following:
 
@@ -42,11 +42,15 @@ the following options:
   Add your Campaign Monitor API key and list ID to have new subscribers
   automatically added. 
 
-## Customising your controller
+## Customising your model or controller
 
-If you want to customise the PrelaunchController, simply generate the controller file and make the changes:
+If you want to customise the PrelaunchController or the
+PrelaunchSubscriber model, simply use the built-in generators and make
+changes to the generated files:
 
-    rails generate t-minus:controller
+    rails generate t_minus:controller
+
+    rails generate t_minus:model
 
 ## Contributing
  
