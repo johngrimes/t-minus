@@ -20,7 +20,7 @@ Or you can install it as a plugin:
 
 Once you have T-Minus installed, run the installation generator:
 
-    rails generate t_minus:install
+    rails generate t_minus:install [--skip-mailing-list]
 
 By default, this will generate the following:
 
