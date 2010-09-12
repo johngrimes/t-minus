@@ -23,15 +23,22 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "lib/app/controllers/prelaunch_controller.rb",
      "lib/app/models/prelaunch_subscriber.rb",
-     "lib/generators/t-minus/install_generator.rb",
-     "lib/generators/t-minus/templates/migration.rb",
-     "lib/generators/t-minus/templates/prelaunch_config.yml",
+     "lib/app/views/prelaunch/new.html.haml",
+     "lib/generators/erb/t_minus/t-minus_generator.rb",
+     "lib/generators/erb/t_minus/templates/new.html.erb",
+     "lib/generators/haml/t_minus/t-minus_generator.rb",
+     "lib/generators/haml/t_minus/templates/new.html.haml",
+     "lib/generators/t_minus/install_generator.rb",
+     "lib/generators/t_minus/templates/migration.rb",
+     "lib/generators/t_minus/templates/prelaunch_config.yml",
      "lib/t-minus.rb",
      "lib/t-minus/engine.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
-     "spec/t-minus_spec.rb"
+     "spec/t-minus_spec.rb",
+     "t-minus.gemspec"
   ]
   s.homepage = %q{http://github.com/johngrimes/t-minus}
   s.rdoc_options = ["--charset=UTF-8"]
