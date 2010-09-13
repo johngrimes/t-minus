@@ -42,6 +42,9 @@ the following options:
   Add your Campaign Monitor API key and list ID to have new subscribers
   automatically added. 
 
+Having trouble finding your Campaign Monitor API key or list ID? Visit
+[this page](http://www.campaignmonitor.com/api/required/).
+
 ## Customising your model or controller
 
 If you want to customise the PrelaunchController or the
