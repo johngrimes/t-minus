@@ -38,9 +38,6 @@ the following options:
 * `active` (optional, defaults to `false`) - Set this to `true` in environments in which you want the
   prelaunch page to show in place of the rest of your app. When your app
   launches, you can simply change this to `false` in production.
-* `mailing_list` (optional, defaults to `true`) - Set this to `false` if
-  you want a plain prelaunch page without any mailing list
-  functionality.
 * `campaign_monitor_api_key` and `campaign_monitor_list_id` (optional) -
   Add your Campaign Monitor API key and list ID to have new subscribers
   automatically added. 
