@@ -9,7 +9,7 @@ class PrelaunchSubscriber < ActiveRecord::Base
 
   private
 
-  def add_to_mailing_list
+  def add_to_campaign_monitor
     subscriber = Campaigning::Subscriber.new(email)
     subscriber.add_and_resubscribe!(PRELAUNCH_CONFIG[:campaign_monitor_list_id])
   end
