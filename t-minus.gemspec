@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "lib/app/config/initializers/load_prelaunch_config.rb",
      "lib/app/config/routes.rb",
      "lib/app/controllers/prelaunch_controller.rb",
      "lib/app/models/prelaunch_subscriber.rb",
