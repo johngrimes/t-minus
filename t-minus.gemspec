@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["John Grimes"]
-  s.date = %q{2010-09-12}
+  s.date = %q{2010-09-13}
   s.description = %q{Rails engine and generators that make it easier to create a prelaunch page for your application that can collect email addresses of interested visitors.}
   s.email = %q{john@smallspark.com.au}
   s.extra_rdoc_files = [
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "lib/app/config/routes.rb",
      "lib/app/controllers/prelaunch_controller.rb",
      "lib/app/models/prelaunch_subscriber.rb",
      "lib/app/views/prelaunch/new.html.haml",
@@ -43,7 +44,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/johngrimes/t-minus}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Prelaunch page and subscriber list for your Rails app.}
   s.test_files = [
     "spec/spec_helper.rb",
@@ -54,7 +55,7 @@ Gem::Specification.new do |s|
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.3.0"])
       s.add_development_dependency(%q<yard>, [">= 0"])
     else
