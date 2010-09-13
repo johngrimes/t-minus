@@ -21,14 +21,14 @@ Or you can install it as a plugin:
 
 Once you have T-Minus installed, run the installation generator:
 
-    rails generate t_minus:install [--skip-mailing-list]
+    rails generate t_minus:install
 
 By default, this will generate the following:
 
 * Configuration file - `config/prelaunch_config.yml`
 * Database migration for prelaunch_subscribers
 * Prelaunch page view template - `app/views/prelaunch/new.html.erb`
-* A line in your `config/routes.rb` file
+  (Haml also supported)
 
 ## Configuration
 
