@@ -10,6 +10,7 @@ begin
     gem.email = 'john@smallspark.com.au'
     gem.homepage = 'http://github.com/johngrimes/t-minus'
     gem.authors = ['John Grimes']
+    gem.add_dependency 'campaigning', '>= 0'
     gem.add_development_dependency 'rspec', '>= 1.3.0'
     gem.add_development_dependency 'yard', '>= 0'
   end
