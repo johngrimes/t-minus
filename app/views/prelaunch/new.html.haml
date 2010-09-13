@@ -1,8 +1,11 @@
-%p Our new website is launching soon.
-%p Add your name to the list and you will be the first to know when we are ready.
-= form_for @prelaunch_subscriber, :url => prelaunch_path do |f|
-  .field
-    = f.text_field :email
-    = error_message_on @prelaunch_subscriber, :email
-  .actions
-    = f.submit 'Add me to the list'
+- if flash[:notice]
+  = flash[:notice].html_safe
+- else
+  %p Our new website is launching soon.
+  %p Add your name to the list and you will be the first to know when we are ready.
+  = form_for @prelaunch_subscriber, :url => prelaunch_path do |f|
+    .field
+      = f.text_field :email
+      = error_message_on @prelaunch_subscriber, :email
+    .actions
+      = f.submit 'Add me to the list'
