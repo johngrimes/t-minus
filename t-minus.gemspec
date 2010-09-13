@@ -31,7 +31,6 @@ Gem::Specification.new do |s|
      "lib/generators/erb/t_minus_generator.rb",
      "lib/generators/erb/templates/new.html.erb",
      "lib/generators/haml/t_minus_generator.rb",
-     "lib/generators/haml/templates/new.html.haml",
      "lib/generators/t_minus/install_generator.rb",
      "lib/generators/t_minus/templates/migration.rb",
      "lib/generators/t_minus/templates/prelaunch_config.yml",
@@ -57,13 +56,16 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<campaigning>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 1.3.0"])
       s.add_development_dependency(%q<yard>, [">= 0"])
     else
+      s.add_dependency(%q<campaigning>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 1.3.0"])
       s.add_dependency(%q<yard>, [">= 0"])
     end
   else
+    s.add_dependency(%q<campaigning>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 1.3.0"])
     s.add_dependency(%q<yard>, [">= 0"])
   end

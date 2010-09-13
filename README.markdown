@@ -3,7 +3,8 @@
 T-Minus is a Rails engine and set of generators that make it easier to
 create a prelaunch page for your Rails application. It includes support
 for the collection of email addresses from interested visitors, and it
-can automatically update your Campaign Monitor mailing list.
+can automatically update your [Campaign Monitor](http://www.campaignmonitor.com/) 
+mailing list.
 
 T-Minus currently only works with Rails 3 applications.
 
@@ -34,7 +35,7 @@ By default, this will generate the following:
 The `prelaunch_config.yml` file is separated into environments, and has
 the following options:
 
-* `active` (required) - Set this to `true` in environments in which you want the
+* `active` (optional, defaults to `false`) - Set this to `true` in environments in which you want the
   prelaunch page to show in place of the rest of your app. When your app
   launches, you can simply change this to `false` in production.
 * `mailing_list` (optional, defaults to `true`) - Set this to `false` if
@@ -63,4 +64,4 @@ changes to the generated files:
 
 ## Copyright
 
-Copyright (c) 2010 John Grimes. See LICENSE for details.
+Copyright (c) 2010 [John Grimes](http://www.smallspark.com.au/about/). See LICENSE for details.
