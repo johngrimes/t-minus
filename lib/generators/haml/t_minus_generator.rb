@@ -1,6 +1,6 @@
 module Haml
   module Generators
-    class TMinusGenerator < Rails::Generators::Base
+    class TMinusGenerator < ::Rails::Generators::Base
       desc 'Generates Haml view template for T-Minus'
       source_root File.expand_path('../templates', __FILE__)
 
