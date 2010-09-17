@@ -8,7 +8,7 @@ gem 'haml-rails', '0.2'
 gem 'compass', '0.10.5'
 gem 'dynamic_form', :git => 'git://github.com/johngrimes/dynamic_form.git'
 
-gem 't-minus'
+gem 't-minus', :path => '../../'
 gem 'campaigning'
 
 group :development do
@@ -16,8 +16,11 @@ group :development do
   gem 'ruby-debug', '0.10.3'
 end
 
+group :development, :test do
+  gem 'rspec', '2.0.0.beta.22'
+  gem 'rspec-rails', '2.0.0.beta.22'
+end
+
 group :test do
-  gem 'rspec', '2.0.0.beta.20'
-  gem 'rspec-rails', '2.0.0.beta.20'
   gem 'mocha', '0.9.8'
 end

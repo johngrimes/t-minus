@@ -14,3 +14,10 @@ RSpec.configure do |config|
   config.global_fixtures = :all
   config.mock_with :mocha
 end
+
+class Module  
+  def redefine_const(name, value)  
+    __send__(:remove_const, name) if const_defined?(name)  
+    const_set(name, value)  
+  end  
+end

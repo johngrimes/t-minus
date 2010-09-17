@@ -1,0 +1,10 @@
+development:
+  active: true
+
+test:
+  active: true
+
+production:
+  active: true
+# campaign_monitor_api_key:
+# campaign_monitor_list_id:

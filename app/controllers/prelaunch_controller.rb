@@ -1,4 +1,4 @@
-class PrelaunchController < ApplicationController
+class PrelaunchController < ActionController::Base
   def new
     @prelaunch_subscriber = PrelaunchSubscriber.new
   end
