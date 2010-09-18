@@ -1,3 +1,0 @@
-[submodule "lib/templates"]
-	path = lib/templates
-	url = git@github.com:johngrimes/rails-templates.git

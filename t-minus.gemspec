@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["John Grimes"]
-  s.date = %q{2010-09-13}
+  s.date = %q{2010-09-19}
   s.description = %q{Rails engine and generators that make it easier to create a prelaunch page for your application that can collect email addresses of interested visitors.}
   s.email = %q{john@smallspark.com.au}
   s.extra_rdoc_files = [
@@ -19,13 +19,11 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
      ".gitignore",
+     ".rspec",
      "LICENSE",
      "README.markdown",
      "Rakefile",
      "VERSION",
-     "app/controllers/prelaunch_controller.rb",
-     "app/models/prelaunch_subscriber.rb",
-     "app/views/prelaunch/new.html.haml",
      "config/initializers/load_prelaunch_config.rb",
      "config/routes.rb",
      "lib/generators/erb/t_minus_generator.rb",
@@ -36,38 +34,50 @@ Gem::Specification.new do |s|
      "lib/generators/t_minus/templates/prelaunch_config.yml",
      "lib/t-minus.rb",
      "lib/t-minus/engine.rb",
-     "spec/spec.opts",
-     "spec/spec_helper.rb",
-     "spec/t-minus_spec.rb",
      "t-minus.gemspec"
   ]
   s.homepage = %q{http://github.com/johngrimes/t-minus}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
+  s.rubygems_version = %q{1.3.7}
   s.summary = %q{Prelaunch page and subscriber list for your Rails app.}
   s.test_files = [
     "spec/spec_helper.rb",
-     "spec/t-minus_spec.rb"
+     "spec/controllers/prelaunch_controller_spec.rb",
+     "spec/models/prelaunch_subscriber_spec.rb",
+     "test/rails_app/app/helpers/application_helper.rb",
+     "test/rails_app/app/controllers/application_controller.rb",
+     "test/rails_app/db/seeds.rb",
+     "test/rails_app/config/routes.rb",
+     "test/rails_app/config/boot.rb",
+     "test/rails_app/config/initializers/inflections.rb",
+     "test/rails_app/config/initializers/backtrace_silencers.rb",
+     "test/rails_app/config/initializers/mime_types.rb",
+     "test/rails_app/config/initializers/secret_token.rb",
+     "test/rails_app/config/initializers/session_store.rb",
+     "test/rails_app/config/environments/production.rb",
+     "test/rails_app/config/environments/test.rb",
+     "test/rails_app/config/environments/development.rb",
+     "test/rails_app/config/environment.rb",
+     "test/rails_app/config/application.rb",
+     "test/rails_app/test/test_helper.rb",
+     "test/rails_app/test/performance/browsing_test.rb"
   ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<campaigning>, [">= 0"])
-      s.add_development_dependency(%q<rspec>, [">= 1.3.0"])
-      s.add_development_dependency(%q<yard>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, [">= 2.0.0.beta.20"])
     else
       s.add_dependency(%q<campaigning>, [">= 0"])
-      s.add_dependency(%q<rspec>, [">= 1.3.0"])
-      s.add_dependency(%q<yard>, [">= 0"])
+      s.add_dependency(%q<rspec>, [">= 2.0.0.beta.20"])
     end
   else
     s.add_dependency(%q<campaigning>, [">= 0"])
-    s.add_dependency(%q<rspec>, [">= 1.3.0"])
-    s.add_dependency(%q<yard>, [">= 0"])
+    s.add_dependency(%q<rspec>, [">= 2.0.0.beta.20"])
   end
 end
 

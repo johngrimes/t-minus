@@ -1,9 +1,0 @@
-.bundle
-db/*.sqlite3
-log/*.log
-tmp/**/*
-coverage
-public/system
-public/stylesheets/compiled/*
-public/stylesheets/cache/*
-public/javascripts/cache/*

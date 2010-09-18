@@ -1,7 +1,7 @@
 require 't-minus'
 require 'rails'
 
-module TeeMinus
+module TMinus
   class Engine < Rails::Engine
   end
 end
