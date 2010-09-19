@@ -10,8 +10,14 @@ begin
     gem.email = 'john@smallspark.com.au'
     gem.homepage = 'http://github.com/johngrimes/t-minus'
     gem.authors = ['John Grimes']
-    gem.add_dependency 'campaigning', '>= 0'
-    gem.add_development_dependency 'rspec', '>= 2.0.0.beta.20'
+    gem.add_dependency 'campaigning', '>= 0.15.0'
+    gem.add_development_dependency 'rspec', '>= 2.0.0.beta.22'
+    gem.add_development_dependency 'rspec-rails', '>= 2.0.0.beta.22'
+    gem.add_development_dependency 'mocha', '>= 0.9.8'
+    gem.add_development_dependency 'cucumber', '>= 0.8.5'
+    gem.add_development_dependency 'cucumber-rails', '>= 0.3.2'
+    gem.add_development_dependency 'webrat', '>= 0.7.1'
+    gem.add_development_dependency 'nokogiri', '>= 1.4.3.1'
 
     gem.files = FileList['app/**/*', 'config/**/*', 'lib/**/*']
     gem.test_files = FileList['spec/**/*_spec.rb']
