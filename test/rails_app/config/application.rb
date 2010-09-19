@@ -41,6 +41,7 @@ module RailsApp
 
     config.generators do |g|
       g.template_engine :erb
+      g.test_framework :test_unit
     end
   end
 end

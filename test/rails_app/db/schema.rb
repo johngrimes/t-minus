@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100919011152) do
+ActiveRecord::Schema.define(:version => 20100919093846) do
 
   create_table "prelaunch_subscribers", :force => true do |t|
     t.string   "email"

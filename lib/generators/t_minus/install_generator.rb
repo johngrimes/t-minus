@@ -9,6 +9,7 @@ module TMinus
       source_root File.expand_path('../templates', __FILE__)
 
       hook_for :template_engine, :as => :t_minus
+      hook_for :test_framework, :as => :t_minus
 
       def copy_configuration_file
         copy_file 'prelaunch_config.yml', 'config/prelaunch_config.yml'

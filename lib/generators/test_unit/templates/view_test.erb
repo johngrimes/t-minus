@@ -1,0 +1,11 @@
+require 'test_helper'
+
+class PrelaunchNewViewTest < ActionView::TestCase
+  def setup
+    @prelaunch_subscriber = PrelaunchSubscriber.new
+  end
+
+  test 'should render successfully' do
+    render :template => 'prelaunch/new'
+  end
+end
