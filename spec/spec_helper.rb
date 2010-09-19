@@ -15,14 +15,16 @@ RSpec.configure do |config|
   config.mock_with :mocha
 
   config.before(:suite) do
-    FileUtils.chdir(File.expand_path(File.dirname(__FILE__) + '/../test/rails_app/')) do
-      `rails generate t_minus:install`
-    end
+    TMinus::Routes.map
   end
-  config.after(:suite) do
-    FileUtils.chdir(File.expand_path(File.dirname(__FILE__) + '/../test/rails_app/')) do
-      `rails destroy t_minus:install`
-    end
+
+  config.before(:each) do
+    Object.redefine_const(:PRELAUNCH_CONFIG, {
+      :active => true,
+      :campaign_monitor_api_key => 'somekey',
+      :campaign_monitor_list_id => 'somelistid'
+    })
+    Object.redefine_const(:CAMPAIGN_MONITOR_API_KEY, PRELAUNCH_CONFIG[:campaign_monitor_api_key])
   end
 end
 
