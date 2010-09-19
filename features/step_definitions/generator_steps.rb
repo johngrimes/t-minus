@@ -15,7 +15,3 @@ Then /^file with name matching "(.*)" is created/ do |pattern|
     Dir[pattern].should_not be_empty
   end
 end
-
-Then /^the (.*) class is defined/ do |class_name|
-  Object.const_defined?(class_name).should be_true
-end
