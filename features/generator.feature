@@ -14,3 +14,8 @@ Feature: Generator
     Given a project with T-Minus installed
     When the t_minus:controller generator is executed
     Then file "app/controllers/prelaunch_controller.rb" is created
+
+  Scenario: Run model generator
+    Given a project with T-Minus installed
+    When the t_minus:model generator is executed
+    Then file "app/models/prelaunch_subscriber.rb" is created
