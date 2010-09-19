@@ -2,7 +2,7 @@ module Erb
   module Generators
     class TMinusGenerator < Rails::Generators::Base
       desc 'Generates ERB view template for T-Minus'
-      source_root File.expand_path('../templates', __FILE__)
+      source_root File.expand_path('../../../../app/views/prelaunch/', __FILE__)
 
       def create_prelaunch_directory
         empty_directory 'app/views/prelaunch'
