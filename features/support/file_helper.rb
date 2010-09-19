@@ -8,7 +8,9 @@ module FileHelper
                     ['app/controllers/prelaunch_controller.rb',
                      'app/models/prelaunch_subscriber.rb',
                      'app/views/prelaunch',
-                     'config/prelaunch_config.yml'])
+                     'config/prelaunch_config.yml',
+                     'spec/views/prelaunch',
+                     'test/views/prelaunch'])
   end
 end
 
