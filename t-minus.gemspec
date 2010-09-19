@@ -17,13 +17,10 @@ Gem::Specification.new do |s|
      "README.markdown"
   ]
   s.files = [
-    ".document",
-     ".gitignore",
-     ".rspec",
-     "LICENSE",
-     "README.markdown",
-     "Rakefile",
-     "VERSION",
+    "app/controllers/prelaunch_controller.rb",
+     "app/models/prelaunch_subscriber.rb",
+     "app/views/prelaunch/new.html.haml",
+     "config/cucumber.yml",
      "config/initializers/load_prelaunch_config.rb",
      "config/routes.rb",
      "lib/generators/erb/t_minus_generator.rb",
@@ -33,8 +30,7 @@ Gem::Specification.new do |s|
      "lib/generators/t_minus/templates/migration.rb",
      "lib/generators/t_minus/templates/prelaunch_config.yml",
      "lib/t-minus.rb",
-     "lib/t-minus/engine.rb",
-     "t-minus.gemspec"
+     "lib/t-minus/engine.rb"
   ]
   s.homepage = %q{http://github.com/johngrimes/t-minus}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -42,26 +38,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Prelaunch page and subscriber list for your Rails app.}
   s.test_files = [
-    "spec/spec_helper.rb",
-     "spec/controllers/prelaunch_controller_spec.rb",
-     "spec/models/prelaunch_subscriber_spec.rb",
-     "test/rails_app/app/helpers/application_helper.rb",
-     "test/rails_app/app/controllers/application_controller.rb",
-     "test/rails_app/db/seeds.rb",
-     "test/rails_app/config/routes.rb",
-     "test/rails_app/config/boot.rb",
-     "test/rails_app/config/initializers/inflections.rb",
-     "test/rails_app/config/initializers/backtrace_silencers.rb",
-     "test/rails_app/config/initializers/mime_types.rb",
-     "test/rails_app/config/initializers/secret_token.rb",
-     "test/rails_app/config/initializers/session_store.rb",
-     "test/rails_app/config/environments/production.rb",
-     "test/rails_app/config/environments/test.rb",
-     "test/rails_app/config/environments/development.rb",
-     "test/rails_app/config/environment.rb",
-     "test/rails_app/config/application.rb",
-     "test/rails_app/test/test_helper.rb",
-     "test/rails_app/test/performance/browsing_test.rb"
+    "spec/controllers/prelaunch_controller_spec.rb",
+     "spec/models/prelaunch_subscriber_spec.rb"
   ]
 
   if s.respond_to? :specification_version then

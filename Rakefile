@@ -12,6 +12,9 @@ begin
     gem.authors = ['John Grimes']
     gem.add_dependency 'campaigning', '>= 0'
     gem.add_development_dependency 'rspec', '>= 2.0.0.beta.20'
+
+    gem.files = FileList['app/**/*', 'config/**/*', 'lib/**/*']
+    gem.test_files = FileList['spec/**/*_spec.rb']
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
