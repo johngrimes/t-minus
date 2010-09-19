@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     t-minus (0.0.0)
-      campaigning
+      campaigning (>= 0.15.0)
 
 GEM
   remote: http://rubygems.org/

@@ -13,6 +13,17 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.global_fixtures = :all
   config.mock_with :mocha
+
+  config.before(:suite) do
+    FileUtils.chdir(File.expand_path(File.dirname(__FILE__) + '/../test/rails_app/')) do
+      `rails generate t_minus:install`
+    end
+  end
+  config.after(:suite) do
+    FileUtils.chdir(File.expand_path(File.dirname(__FILE__) + '/../test/rails_app/')) do
+      `rails destroy t_minus:install`
+    end
+  end
 end
 
 class Module  
