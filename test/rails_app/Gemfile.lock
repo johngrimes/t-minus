@@ -2,7 +2,7 @@ PATH
   remote: /home/dev/code/t-minus
   specs:
     t-minus (0.0.0)
-      campaigning
+      campaigning (>= 0.15.0)
 
 GEM
   remote: http://rubygems.org/
@@ -52,6 +52,10 @@ GEM
       abstract (>= 1.0.0)
     gherkin (2.1.5)
       trollop (~> 1.16.2)
+    haml (3.0.18)
+    haml-rails (0.2)
+      haml (~> 3.0)
+      rails (~> 3.0.0.rc)
     httpclient (2.1.5.2)
     i18n (0.4.1)
     json_pure (1.4.6)
@@ -116,6 +120,8 @@ DEPENDENCIES
   campaigning (= 0.15.0)
   cucumber (= 0.8.5)
   cucumber-rails (= 0.3.2)
+  haml (= 3.0.18)
+  haml-rails (= 0.2)
   mocha (= 0.9.8)
   nokogiri (= 1.4.3.1)
   rails (= 3.0.0)
