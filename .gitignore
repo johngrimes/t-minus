@@ -15,6 +15,7 @@ tmtags
 
 ## PROJECT::GENERAL
 .bundle
+.rvmrc
 coverage
 rdoc
 pkg
