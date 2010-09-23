@@ -15,7 +15,7 @@ Gemfile, then running `bundle:install`:
 
 Or you can install it as a plugin:
 
-    rails plugin install https://johngrimes@github.com/johngrimes/t-minus.git
+    rails plugin install http://github.com/johngrimes/t-minus.git
 
 ## Getting started
 
@@ -28,7 +28,12 @@ By default, this will generate the following:
 * Configuration file - `config/prelaunch_config.yml`
 * Database migration for prelaunch_subscribers
 * Prelaunch page view template - `app/views/prelaunch/new.html.erb`
-  (Haml also supported)
+* Prelaunch layout template - `app/views/layouts/prelaunch.html.erb`
+* Empty prelaunch stylesheet - `public/stylesheets/prelaunch.css`
+
+Then run:
+
+    rake db:migrate
 
 ## Configuration
 
@@ -55,14 +60,16 @@ changes to the generated files:
 
     rails generate t_minus:model
 
-## Contributing
+## Contributing to T-Minus
+
+I encourage you to:
  
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add features / specs for it.
 * Send me a pull request. Bonus points for topic branches.
 
-### Guide to getting the features and specs running
+### A quick guide to getting the features and specs running
 
 T-Minus works out on a Rails project in the test/rails_app directory.
 
