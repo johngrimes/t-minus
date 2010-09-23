@@ -59,8 +59,26 @@ changes to the generated files:
  
 * Fork the project.
 * Make your feature addition or bug fix.
-* Add specs for it.
+* Add features / specs for it.
 * Send me a pull request. Bonus points for topic branches.
+
+### Guide to getting the features and specs running
+
+T-Minus works out on a Rails project in the test/rails_app directory.
+
+First thing to do once you have cloned it down is to go into the
+test/rails_app directory and run `bundle install` to get all the
+dependencies.
+
+Then go back to the root of T-Minus and run:
+
+    cucumber
+
+Then:
+
+    rake spec
+
+If the features or specs don't pass, please let me know.
 
 ## Copyright
 
