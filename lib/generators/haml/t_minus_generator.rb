@@ -11,6 +11,10 @@ module Haml
       def copy_view_file
         copy_file 'new.html.haml', 'app/views/prelaunch/new.html.haml'
       end
+
+      def copy_layout_file
+        copy_file 'prelaunch.html.haml', 'app/views/layouts/prelaunch.html.haml'
+      end
     end
   end
 end

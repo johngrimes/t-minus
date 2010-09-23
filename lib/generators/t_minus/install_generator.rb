@@ -19,6 +19,10 @@ module TMinus
         migration_template 'migration.rb', "db/migrate/create_#{table_name}"
       end
 
+      def create_css_file
+        create_file 'public/stylesheets/prelaunch.css'
+      end
+
       def self.next_migration_number(dirname)
         ActiveRecord::Generators::Base.next_migration_number(dirname)
       end

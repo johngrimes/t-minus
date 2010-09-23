@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title><%= Rails.application.class.to_s.split('::').first.titleize %></title>
+    <%= stylesheet_link_tag 'prelaunch' %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>

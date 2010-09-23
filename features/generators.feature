@@ -8,16 +8,20 @@ Feature: Generators
     When the t_minus:install generator is executed
     Then file "config/prelaunch_config.yml" is created
     And file with name matching "db/migrate/*_create_prelaunch_subscribers.rb" is created
+    And file "app/views/layouts/prelaunch.html.erb" is created
     And file "app/views/prelaunch/new.html.erb" is created
     And file "spec/views/prelaunch/new.html.erb_spec.rb" is created
+    And file "public/stylesheets/prelaunch.css" is created
 
   Scenario: Run install generator specifying Haml and Test::Unit
     Given a clean project
     When I run "rails generate t_minus:install --template-engine=haml --test-framework=test_unit"
     Then file "config/prelaunch_config.yml" is created
     And file with name matching "db/migrate/*_create_prelaunch_subscribers.rb" is created
+    And file "app/views/layouts/prelaunch.html.haml" is created
     And file "app/views/prelaunch/new.html.haml" is created
     And file "test/views/prelaunch/new.html.haml_test.rb" is created
+    And file "public/stylesheets/prelaunch.css" is created
 
   Scenario: Run controller generator
     Given a project with T-Minus installed

@@ -1,0 +1,9 @@
+!!!
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => 'UTF-8'}
+    %title
+    = stylesheet_link_tag 'prelaunch'
+    = csrf_meta_tag
+  %body
+    = yield
