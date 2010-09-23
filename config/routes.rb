@@ -9,4 +9,7 @@ module TMinus
   end
 end
 
-TMinus::Routes.map if PRELAUNCH_CONFIG[:active]
+if PRELAUNCH_CONFIG[:active]
+  Rails.application.routes.clear!
+  TMinus::Routes.map
+end

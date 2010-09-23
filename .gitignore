@@ -21,3 +21,4 @@ rdoc
 pkg
 
 ## PROJECT::SPECIFIC
+test/rails_app/db/schema.rb
