@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{t-minus}
-  s.version = "0.0.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["John Grimes"]
-  s.date = %q{2010-09-19}
+  s.date = %q{2010-09-23}
   s.description = %q{Rails engine and generators that make it easier to create a prelaunch page for your application that can collect email addresses of interested visitors.}
   s.email = %q{john@smallspark.com.au}
   s.extra_rdoc_files = [
@@ -19,18 +19,27 @@ Gem::Specification.new do |s|
   s.files = [
     "app/controllers/prelaunch_controller.rb",
      "app/models/prelaunch_subscriber.rb",
-     "app/views/prelaunch/new.html.haml",
+     "app/views/layouts/prelaunch.html.erb",
+     "app/views/prelaunch/new.html.erb",
      "config/cucumber.yml",
      "config/initializers/load_prelaunch_config.rb",
      "config/routes.rb",
      "lib/generators/erb/t_minus_generator.rb",
-     "lib/generators/erb/templates/new.html.erb",
      "lib/generators/haml/t_minus_generator.rb",
+     "lib/generators/haml/templates/new.html.haml",
+     "lib/generators/haml/templates/prelaunch.html.haml",
+     "lib/generators/rspec/t_minus_generator.rb",
+     "lib/generators/rspec/templates/view_spec.erb",
+     "lib/generators/t_minus/controller_generator.rb",
      "lib/generators/t_minus/install_generator.rb",
+     "lib/generators/t_minus/model_generator.rb",
      "lib/generators/t_minus/templates/migration.rb",
      "lib/generators/t_minus/templates/prelaunch_config.yml",
+     "lib/generators/test_unit/t_minus_generator.rb",
+     "lib/generators/test_unit/templates/view_test.erb",
      "lib/t-minus.rb",
-     "lib/t-minus/engine.rb"
+     "lib/t-minus/engine.rb",
+     "lib/t-minus/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/johngrimes/t-minus}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -38,7 +47,9 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Prelaunch page and subscriber list for your Rails app.}
   s.test_files = [
-    "spec/controllers/prelaunch_controller_spec.rb",
+    "spec/views/prelaunch/new.html.haml_spec.rb",
+     "spec/views/prelaunch/new.html.erb_spec.rb",
+     "spec/controllers/prelaunch_controller_spec.rb",
      "spec/models/prelaunch_subscriber_spec.rb"
   ]
 
@@ -48,6 +59,7 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<campaigning>, [">= 0.15.0"])
+      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_development_dependency(%q<rspec>, [">= 2.0.0.beta.22"])
       s.add_development_dependency(%q<rspec-rails>, [">= 2.0.0.beta.22"])
       s.add_development_dependency(%q<mocha>, [">= 0.9.8"])
@@ -55,8 +67,10 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<cucumber-rails>, [">= 0.3.2"])
       s.add_development_dependency(%q<webrat>, [">= 0.7.1"])
       s.add_development_dependency(%q<nokogiri>, [">= 1.4.3.1"])
+      s.add_development_dependency(%q<jeweler>, [">= 1.4.0"])
     else
       s.add_dependency(%q<campaigning>, [">= 0.15.0"])
+      s.add_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_dependency(%q<rspec>, [">= 2.0.0.beta.22"])
       s.add_dependency(%q<rspec-rails>, [">= 2.0.0.beta.22"])
       s.add_dependency(%q<mocha>, [">= 0.9.8"])
@@ -64,9 +78,11 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<cucumber-rails>, [">= 0.3.2"])
       s.add_dependency(%q<webrat>, [">= 0.7.1"])
       s.add_dependency(%q<nokogiri>, [">= 1.4.3.1"])
+      s.add_dependency(%q<jeweler>, [">= 1.4.0"])
     end
   else
     s.add_dependency(%q<campaigning>, [">= 0.15.0"])
+    s.add_dependency(%q<bundler>, [">= 1.0.0"])
     s.add_dependency(%q<rspec>, [">= 2.0.0.beta.22"])
     s.add_dependency(%q<rspec-rails>, [">= 2.0.0.beta.22"])
     s.add_dependency(%q<mocha>, [">= 0.9.8"])
@@ -74,6 +90,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<cucumber-rails>, [">= 0.3.2"])
     s.add_dependency(%q<webrat>, [">= 0.7.1"])
     s.add_dependency(%q<nokogiri>, [">= 1.4.3.1"])
+    s.add_dependency(%q<jeweler>, [">= 1.4.0"])
   end
 end
 
