@@ -13,6 +13,10 @@ module Rspec
         template 'view_spec.erb', 
           "spec/views/prelaunch/new.html.#{options[:template_engine]}_spec.rb"
       end
+
+      def include_test_helper
+        append_file 'spec/spec_helper.rb', "require 't-minus/test_helper'"
+      end
     end
   end
 end

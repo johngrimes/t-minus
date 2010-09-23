@@ -1,7 +1,7 @@
-Feature: Generator
+Feature: Generators
   As a web developer that needs a quick prelaunch page
-  I want a code generator
-  In order to initialise and configure T-Minus
+  I want code generators
+  In order to automate initialisation and common tasks
 
   Scenario: Run install generator
     Given a clean project
@@ -19,3 +19,9 @@ Feature: Generator
     Given a project with T-Minus installed
     When the t_minus:model generator is executed
     Then file "app/models/prelaunch_subscriber.rb" is created
+
+  Scenario: T-Minus view spec co-exists with specs for non prelaunch functionality
+    Given a project with T-Minus installed
+    When I run "rake db:migrate:reset"
+    When I run "rake spec 2>/dev/null | grep '0 failures'"
+    Then I should see 1 lines of output

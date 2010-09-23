@@ -2,10 +2,13 @@ require 'spec_helper'
 
 describe 'prelaunch/new.html.<%= options[:template_engine] %>' do
   before do
+    simulate_prelaunch_routes
     assign(:prelaunch_subscriber, PrelaunchSubscriber.new)
   end
 
   it 'should render successfully' do
     render
   end
+
+  after { restore_routes }
 end

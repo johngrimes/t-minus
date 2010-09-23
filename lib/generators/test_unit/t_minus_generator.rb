@@ -13,6 +13,10 @@ module TestUnit
         template 'view_test.erb', 
           "test/views/prelaunch/new.html.#{options[:template_engine]}_test.rb"
       end
+
+      def include_test_helper
+        append_file 'test/test_helper.rb', "require 't-minus/test_helper'"
+      end
     end
   end
 end
