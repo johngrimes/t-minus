@@ -1,7 +1,7 @@
 PATH
   remote: /home/dev/code/t-minus
   specs:
-    t-minus (0.0.0)
+    t-minus (0.2.0)
       campaigning (>= 0.15.0)
 
 GEM
@@ -117,16 +117,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  campaigning (= 0.15.0)
-  cucumber (= 0.8.5)
-  cucumber-rails (= 0.3.2)
-  haml (= 3.0.18)
-  haml-rails (= 0.2)
-  mocha (= 0.9.8)
-  nokogiri (= 1.4.3.1)
+  campaigning
+  cucumber-rails
+  haml-rails
+  mocha
+  nokogiri
   rails (= 3.0.0)
-  rspec (= 2.0.0.beta.22)
   rspec-rails (= 2.0.0.beta.22)
-  sqlite3-ruby (= 1.3.1)
+  sqlite3-ruby
   t-minus!
-  webrat (= 0.7.1)
+  webrat
