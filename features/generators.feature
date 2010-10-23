@@ -1,3 +1,4 @@
+@changes_files
 Feature: Generators
   As a web developer that needs a quick prelaunch page
   I want code generators
@@ -38,3 +39,13 @@ Feature: Generators
     When I run "rake db:migrate:reset"
     When I run "rake spec 2>/dev/null | grep '0 failures'"
     Then I should see 1 lines of output
+
+  Scenario: Run install generator when no spec directory exists
+    Given a clean project with no spec directory
+    When the t_minus:install generator is executed
+    Then file "spec/spec_helper.rb" is created
+
+  Scenario: Run install generator with Test::Unit when no test directory exists
+    Given a clean project with no test directory
+    When I run "rails generate t_minus:install --test-framework=test_unit"
+    Then file "test/test_helper.rb" is created

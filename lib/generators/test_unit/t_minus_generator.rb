@@ -15,7 +15,16 @@ module TestUnit
       end
 
       def include_test_helper
-        append_file 'test/test_helper.rb', "require 't-minus/test_helper'"
+        if File.exists? File.expand_path('test/test_helper.rb', @_source_root)
+          append_file 'test/test_helper.rb', "require 't-minus/test_helper'"
+        else
+          create_file 'test/test_helper.rb', <<-FILE
+            ENV['RAILS_ENV'] = 'test'
+            require File.expand_path('../../config/environment', __FILE__)
+            require 'rails/test_help'
+            require 't-minus/test_helper'
+          FILE
+        end
       end
     end
   end

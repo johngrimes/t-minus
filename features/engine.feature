@@ -1,3 +1,4 @@
+@changes_files
 Feature: Engine
   As a web developer that needs a quick prelaunch page
   I want a Rails engine

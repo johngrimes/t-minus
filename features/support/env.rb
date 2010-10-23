@@ -16,11 +16,16 @@ Webrat.configure do |config|
 end
 
 Before do
-  @test_app_path = File.expand_path(File.dirname(__FILE__) + '/../../test/rails_app/')
+  @test_dir = File.expand_path(File.dirname(__FILE__) + '/../../test/')
+  @test_app_path = File.expand_path('rails_app', @test_dir)
 end
 
-After do
-  in_test_app_directory do
-    remove_all_tminus_files
-  end
+Before('@changes_files') do
+  @orig_app_path = File.expand_path('orig_app', @test_dir)
+  FileUtils.cp_r(@test_app_path, @orig_app_path)
+end
+
+After('@changes_files') do
+  FileUtils.rm_rf(@test_app_path)
+  FileUtils.mv(@orig_app_path, @test_app_path)
 end

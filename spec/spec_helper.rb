@@ -15,7 +15,23 @@ RSpec.configure do |config|
   config.mock_with :mocha
 
   config.before(:suite) do
+    # Make a copy of the clean test app and install T-Minus
+    @test_dir = File.expand_path(File.dirname(__FILE__) + '/../test/')
+    @test_app_path = File.expand_path('rails_app', @test_dir)
+    @orig_app_path = File.expand_path('orig_app', @test_dir)
+    FileUtils.cp_r(@test_app_path, @orig_app_path)
+    FileUtils.chdir(@test_app_path) do
+      `rails generate t_minus:install`
+      `rake db:migrate`
+    end
+
     TMinus::Routes.map
+  end
+
+  config.after(:suite) do
+    # Restore the clean test app
+    FileUtils.rm_rf(@test_app_path)
+    FileUtils.mv(@orig_app_path, @test_app_path)
   end
 
   config.before(:each) do
