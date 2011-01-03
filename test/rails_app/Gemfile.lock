@@ -1,7 +1,7 @@
 PATH
   remote: /home/dev/code/t-minus
   specs:
-    t-minus (0.2.1)
+    t-minus (0.2.2)
       campaigning (>= 0.15.0)
 
 GEM
@@ -56,7 +56,7 @@ GEM
     haml-rails (0.2)
       haml (~> 3.0)
       rails (~> 3.0.0.rc)
-    httpclient (2.1.5.2)
+    httpclient (2.1.6)
     i18n (0.4.1)
     json_pure (1.4.6)
     mail (2.2.6.1)
@@ -117,7 +117,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  campaigning
   cucumber-rails
   haml-rails
   mocha

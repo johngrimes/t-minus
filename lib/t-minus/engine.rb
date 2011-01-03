@@ -1,4 +1,5 @@
 require 't-minus'
+require 'campaigning'
 require 'rails'
 
 module TMinus
