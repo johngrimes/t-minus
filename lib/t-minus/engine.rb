@@ -1,5 +1,5 @@
 require 't-minus'
-require 'campaigning'
+require 'createsend'
 require 'rails'
 
 module TMinus

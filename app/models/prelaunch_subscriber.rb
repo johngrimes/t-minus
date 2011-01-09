@@ -10,12 +10,12 @@ class PrelaunchSubscriber < ActiveRecord::Base
   private
 
   def add_to_campaign_monitor
-    subscriber = Campaigning::Subscriber.new(email)
-    subscriber.add_and_resubscribe!(PRELAUNCH_CONFIG[:campaign_monitor_list_id])
+    list_id = PRELAUNCH_CONFIG[:campaign_monitor_list_id]
+    CreateSend::Subscriber.add(list_id, email, "", [], true)
   end
 
   def campaign_monitor_configured?
-    !(PRELAUNCH_CONFIG[:campaign_monitor_api_key].blank? || 
-      PRELAUNCH_CONFIG[:campaign_monitor_list_id].blank?)
+    PRELAUNCH_CONFIG[:campaign_monitor_api_key].present? && 
+    PRELAUNCH_CONFIG[:campaign_monitor_list_id].present?
   end
 end
