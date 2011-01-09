@@ -40,7 +40,7 @@ RSpec.configure do |config|
       :campaign_monitor_api_key => 'somekey',
       :campaign_monitor_list_id => 'somelistid'
     })
-    Object.redefine_const(:CAMPAIGN_MONITOR_API_KEY, PRELAUNCH_CONFIG[:campaign_monitor_api_key])
+    CreateSend.api_key PRELAUNCH_CONFIG[:campaign_monitor_api_key]
   end
 end
 

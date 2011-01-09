@@ -11,7 +11,7 @@ describe PrelaunchSubscriber do
 
   describe 'add_to_campaign_monitor' do
     it 'should be successful' do
-      Campaigning::Subscriber.any_instance.expects(:add_and_resubscribe!).returns(true)
+      CreateSend::Subscriber.expects(:add).returns(true)
       @prelaunch_subscriber.send(:add_to_campaign_monitor)
     end
   end
