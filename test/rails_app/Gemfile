@@ -1,14 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '~> 3.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'haml-rails'
+gem 'haml-rails', '~> 0.3'
 
 gem 't-minus', :path => '../../'
 
-gem 'rspec-rails', '2.0.0.beta.22'
-gem 'mocha'
-gem 'cucumber-rails'
-gem 'webrat'
-gem 'nokogiri'
+gem 'rspec-rails', '~> 2'
+gem 'mocha', '~> 0.9'
+gem 'cucumber-rails', '~> 0.3'
+gem 'webrat', '~> 0.7'
+gem 'nokogiri', '~> 1.4.3'
