@@ -3,7 +3,6 @@ require 'spec_helper'
 describe "articles/edit.html.erb" do
   before(:each) do
     @article = assign(:article, stub_model(Article,
-      :new_record? => false,
       :title => "MyString",
       :body => "MyText",
       :published => false
@@ -13,10 +12,11 @@ describe "articles/edit.html.erb" do
   it "renders the edit article form" do
     render
 
-    rendered.should have_selector("form", :action => article_path(@article), :method => "post") do |form|
-      form.should have_selector("input#article_title", :name => "article[title]")
-      form.should have_selector("textarea#article_body", :name => "article[body]")
-      form.should have_selector("input#article_published", :name => "article[published]")
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    assert_select "form", :action => article_path(@article), :method => "post" do
+      assert_select "input#article_title", :name => "article[title]"
+      assert_select "textarea#article_body", :name => "article[body]"
+      assert_select "input#article_published", :name => "article[published]"
     end
   end
 end

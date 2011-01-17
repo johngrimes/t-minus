@@ -11,8 +11,11 @@ describe "articles/show.html.erb" do
 
   it "renders attributes in <p>" do
     render
-    rendered.should contain("Title".to_s)
-    rendered.should contain("MyText".to_s)
-    rendered.should contain(false.to_s)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Title/)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/MyText/)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/false/)
   end
 end
