@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['{spec}/**/*']
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if s.respond_to? :required_rubygems_version=
 
-  s.add_dependency 'createsend', '~> 0.2'
+  s.add_dependency 'createsend', '~> 1'
 
   s.add_development_dependency 'bundler', '~> 1'
   s.add_development_dependency 'rspec-rails', '~> 2'
