@@ -6,7 +6,7 @@ class PrelaunchController < ActionController::Base
   end
 
   def create
-    @prelaunch_subscriber = PrelaunchSubscriber.new(params[:prelaunch_subscriber])
+    @prelaunch_subscriber = PrelaunchSubscriber.new(:email => params[:prelaunch_subscriber][:email])
     if @prelaunch_subscriber.save
       redirect_to root_url, :notice => <<NOTICE
 <p>Thank you for your interest.</p>
