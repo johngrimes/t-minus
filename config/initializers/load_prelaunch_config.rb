@@ -8,3 +8,10 @@ if File.exists?(prelaunch_config_path)
 else
   PRELAUNCH_CONFIG = {}
 end
+
+prelaunch_custom_routes_file = PRELAUNCH_CONFIG[:custom_routes_file] || "#{Rails.root}/config/prelaunch_routes.rb"
+if File.exists?(prelaunch_custom_routes_file)
+  PRELAUNCH_CUSTOM_ROUTES = File.read(prelaunch_custom_routes_file)
+else
+  PRELAUNCH_CUSTOM_ROUTES = ""
+end

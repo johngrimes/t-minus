@@ -46,6 +46,9 @@ the following options:
 * `campaign_monitor_api_key` and `campaign_monitor_list_id` (optional) -
   Add your Campaign Monitor API key and list ID to have new subscribers
   automatically added. 
+* `custom_routes_file` (optional, defaults to `config/prelaunch_routes.rb` - Specify your own custom routes 
+  file to use when T-Minus is enabled. The file should be configured just like a normal routes.rb. If you don't
+  specify a custom file, the default file `config/prelaunch_routes.rb` is tried.
 
 Having trouble finding your Campaign Monitor API key or list ID? Visit
 [this page](http://www.campaignmonitor.com/api/required/).
@@ -59,6 +62,16 @@ changes to the generated files:
     rails generate t_minus:controller
 
     rails generate t_minus:model
+
+
+## Customising your routes
+
+If you want to add additional routes for different controllers, you can now add 
+those routes to config/prelaunch_routes.rb using the standard syntax. You can generate a
+template prelaunch_routes.rb file with:
+
+    rails generate t_minus:routes
+
 
 ## Contributing to T-Minus
 
