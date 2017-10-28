@@ -1,5 +1,7 @@
 # T-Minus
 
+IMPORTANT NOTE: This repository is no longer actively maintained.
+
 T-Minus is a Rails engine and set of generators that make it easier to
 create a prelaunch page for your Rails application. It includes support
 for the collection of email addresses from interested visitors, and it
