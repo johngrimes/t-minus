@@ -7,6 +7,8 @@ class PrelaunchSubscriber < ActiveRecord::Base
 
   after_save :add_to_campaign_monitor, :if => :campaign_monitor_configured?
 
+  attr_accessible :email
+
   private
 
   def add_to_campaign_monitor
